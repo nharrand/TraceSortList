@@ -26,7 +26,11 @@ LARGE="1 5 10 6 8 85 4 1 2 15 -5 -10 15 20 30 40 1 5 10 6 8 85 4 1 2 15 -5 -10 1
 ```
 
 
-Trace format: (First node contains metadata, its children are threads (here there is only one, named `null`)
+Trace format: 
+ * First node contains metadata, its children are threads (here there is only one, named `null`)
+ * Each node contains two field: its `nam`e (Names that contain `#` are control flow block, other are methods) and an array containing its `children`.
+
+Example:
 ```json
 {
   "name": "Threads",
